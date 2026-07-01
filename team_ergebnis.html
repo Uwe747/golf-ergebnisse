@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Ergebnis – Team-Wertung</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+    .karte {
+        max-width: 420px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        overflow: hidden;
+    }
+    .titel {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #333;
+        padding: 8px 0 4px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th {
+        background: #1a5fa8;
+        color: #ffffff;
+        text-align: left;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    th.platz, td.platz {
+        text-align: center;
+        width: 50px;
+    }
+    th.summe, td.summe {
+        text-align: right;
+        width: 70px;
+    }
+    td {
+        padding: 7px 12px;
+        font-size: 0.95rem;
+        color: #222;
+        border-bottom: 1px solid #eee;
+    }
+    tr:nth-child(even) td {
+        background: #f4f6f8;
+    }
+    .summe {
+        font-weight: 700;
+    }
+    .fuss {
+        padding: 4px 12px 8px 12px;
+        font-size: 0.7rem;
+        color: #999;
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+    <div class="karte">
+        <div class="titel">Ergebnis</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="platz">Platz</th>
+                    <th>Mannschaft</th>
+                    <th class="summe">Summe</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td class="platz">1</td>
+            <td class="verein">Golf-Club Westerwald e.V.*</td>
+            <td class="summe">72</td>
+        </tr>
+        <tr>
+            <td class="platz">2</td>
+            <td class="verein">Wendelinus Golfpark St. Wendel*</td>
+            <td class="summe">90</td>
+        </tr>
+        <tr>
+            <td class="platz">3</td>
+            <td class="verein">Golf Club Trier e.V.*</td>
+            <td class="summe">108</td>
+        </tr>
+        <tr>
+            <td class="platz">4</td>
+            <td class="verein">Golfclub Domtal Mommenheim e.V.*</td>
+            <td class="summe">126</td>
+        </tr>
+        <tr>
+            <td class="platz">5</td>
+            <td class="verein">Golfclub Kyllburger Waldeifel e.V.*</td>
+            <td class="summe">140</td>
+        </tr>
+            </tbody>
+        </table>
+        <div class="fuss">* weniger als 6 Spieler gewertet &middot; Stand 01.07.2026 12:16</div>
+    </div>
+</body>
+</html>
