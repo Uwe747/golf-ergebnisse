@@ -28,11 +28,37 @@
         color: #333;
         padding: 8px 0 4px 0;
     }
-    .warte {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th {
+        background: #1a5fa8;
+        color: #ffffff;
+        text-align: left;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    th.platz, td.platz {
         text-align: center;
-        color: #666;
+        width: 50px;
+    }
+    th.summe, td.summe {
+        text-align: right;
+        width: 70px;
+    }
+    td {
+        padding: 7px 12px;
         font-size: 0.95rem;
-        padding: 24px 16px;
+        color: #222;
+        border-bottom: 1px solid #eee;
+    }
+    tr:nth-child(even) td {
+        background: #f4f6f8;
+    }
+    .summe {
+        font-weight: 700;
     }
     .fuss {
         padding: 4px 12px 8px 12px;
@@ -42,9 +68,10 @@
     }
 </style>
 <script>
-    // Auch die Platzhalterseite lädt sich automatisch neu, damit die
-    // Anzeige nahtlos durch die echte Ergebnistabelle ersetzt wird,
-    // sobald das erste Ergebnis eingetragen wurde.
+    // Seite automatisch neu laden, mit Zeitstempel in der URL, damit
+    // der Browser/das Golf-TV-Modul nicht eine zwischengespeicherte
+    // (veraltete) Version anzeigt, sondern immer die aktuelle Datei
+    // von GitHub neu abruft.
     setTimeout(function () {
         var basisUrl = window.location.href.split("?")[0];
         window.location.href = basisUrl + "?t=" + Date.now();
@@ -54,8 +81,23 @@
 <body>
     <div class="karte">
         <div class="titel">Ergebnis Damen</div>
-        <div class="warte">Noch keine Ergebnisse eingetragen &#8211; die Tabelle erscheint automatisch, sobald der Spieltag beginnt.</div>
-        <div class="fuss">Stand 03.07.2026 13:21</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="platz">Platz</th>
+                    <th>Mannschaft</th>
+                    <th class="summe">Summe</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td class="platz">1</td>
+            <td class="verein">Golf-Club Westerwald e.V.*</td>
+            <td class="summe">54</td>
+        </tr>
+            </tbody>
+        </table>
+        <div class="fuss">* weniger als 5 Spieler gewertet &middot; Stand 03.07.2026 13:32</div>
     </div>
 </body>
 </html>
