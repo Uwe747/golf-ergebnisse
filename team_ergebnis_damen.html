@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Ergebnis Damen – Team-Wertung</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+    .karte {
+        max-width: 420px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        overflow: hidden;
+    }
+    .titel {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #333;
+        padding: 8px 0 4px 0;
+    }
+    .warte {
+        text-align: center;
+        color: #666;
+        font-size: 0.95rem;
+        padding: 24px 16px;
+    }
+    .fuss {
+        padding: 4px 12px 8px 12px;
+        font-size: 0.7rem;
+        color: #999;
+        text-align: right;
+    }
+</style>
+<script>
+    // Auch die Platzhalterseite lädt sich automatisch neu, damit die
+    // Anzeige nahtlos durch die echte Ergebnistabelle ersetzt wird,
+    // sobald das erste Ergebnis eingetragen wurde.
+    setTimeout(function () {
+        var basisUrl = window.location.href.split("?")[0];
+        window.location.href = basisUrl + "?t=" + Date.now();
+    }, 30000);
+</script>
+</head>
+<body>
+    <div class="karte">
+        <div class="titel">Ergebnis Damen</div>
+        <div class="warte">Noch keine Ergebnisse eingetragen &#8211; die Tabelle erscheint automatisch, sobald der Spieltag beginnt.</div>
+        <div class="fuss">Stand 03.07.2026 13:21</div>
+    </div>
+</body>
+</html>
