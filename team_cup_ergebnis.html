@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Team-Cup Ergebnis</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+    .karte {
+        max-width: 720px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        overflow: hidden;
+    }
+    .titel {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #333;
+        padding: 8px 0 4px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    th {
+        background: #1a5fa8;
+        color: #ffffff;
+        text-align: left;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    th.platz, td.platz {
+        text-align: center;
+        width: 40px;
+    }
+    th.team, td.team {
+        width: 170px;
+    }
+    /* Summe bewusst schmal und direkt hinter der Team-Spalte, damit
+       sie optisch nah am Teamnamen steht und mehr Platz fuer die
+       Spielerliste rechts bleibt. */
+    th.summe, td.summe {
+        text-align: right;
+        width: 50px;
+        padding-right: 10px;
+    }
+    td {
+        padding: 7px 10px;
+        font-size: 0.88rem;
+        color: #222;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        overflow-wrap: break-word;
+    }
+    tr:nth-child(even) td {
+        background: #f4f6f8;
+    }
+    .summe {
+        font-weight: 700;
+        color: #1a5fa8;
+    }
+    .spieler {
+        font-size: 0.78rem;
+        color: #666;
+    }
+    .fuss {
+        padding: 4px 10px 8px 10px;
+        font-size: 0.7rem;
+        color: #999;
+        text-align: right;
+    }
+</style>
+<script>
+    // Seite automatisch neu laden, mit Zeitstempel in der URL, damit
+    // der Browser/das Golf-TV-Modul immer die aktuelle Datei von
+    // GitHub neu abruft statt eine zwischengespeicherte Version.
+    setTimeout(function () {
+        var basisUrl = window.location.href.split("?")[0];
+        window.location.href = basisUrl + "?t=" + Date.now();
+    }, 30000);
+</script>
+</head>
+<body>
+    <div class="karte">
+        <div class="titel">Team-Cup Ergebnis</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="platz">Platz</th>
+                    <th class="team">Team</th>
+                    <th class="summe">Summe</th>
+                    <th>Spieler (Punkte)</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td class="platz">1</td>
+            <td class="team">Lollipops*</td>
+            <td class="summe">100</td>
+            <td class="spieler">M. Terborg (54), B. Fisch (46)</td>
+        </tr>
+        <tr>
+            <td class="platz">2</td>
+            <td class="team">0 Master, 4 Desaster*</td>
+            <td class="summe">66</td>
+            <td class="spieler">R. Günther (40), L. Görg (26)</td>
+        </tr>
+        <tr>
+            <td class="platz">3</td>
+            <td class="team">Westwood Golf Girls*</td>
+            <td class="summe">58</td>
+            <td class="spieler">U. Rudersdorf (34), K. Roßbach (24)</td>
+        </tr>
+        <tr>
+            <td class="platz">4</td>
+            <td class="team">Fairway to heaven*</td>
+            <td class="summe">56</td>
+            <td class="spieler">T. Weitzel (56)</td>
+        </tr>
+        <tr>
+            <td class="platz">5</td>
+            <td class="team">Die M&M Crew*</td>
+            <td class="summe">47</td>
+            <td class="spieler">M. Schnupp (47)</td>
+        </tr>
+        <tr>
+            <td class="platz">6</td>
+            <td class="team">Hole Hunters*</td>
+            <td class="summe">42</td>
+            <td class="spieler">H. Schmidt (42)</td>
+        </tr>
+        <tr>
+            <td class="platz">7</td>
+            <td class="team">Flamingo Four*</td>
+            <td class="summe">41</td>
+            <td class="spieler">S. Schröder (41)</td>
+        </tr>
+        <tr>
+            <td class="platz">8</td>
+            <td class="team">3 Ladys und der Leidtragende*</td>
+            <td class="summe">38</td>
+            <td class="spieler">D. Flender (38)</td>
+        </tr>
+        <tr>
+            <td class="platz">9</td>
+            <td class="team">Fore! Freude*</td>
+            <td class="summe">34</td>
+            <td class="spieler">K. Schmidt (34)</td>
+        </tr>
+        <tr>
+            <td class="platz">10</td>
+            <td class="team">Four Balls are better than none*</td>
+            <td class="summe">33</td>
+            <td class="spieler">L. Merz (33)</td>
+        </tr>
+        <tr>
+            <td class="platz">11</td>
+            <td class="team">International Sensation*</td>
+            <td class="summe">29</td>
+            <td class="spieler">R. Baldus (29)</td>
+        </tr>
+        <tr>
+            <td class="platz">12</td>
+            <td class="team">4 Driver für ein Hallelujah*</td>
+            <td class="summe">29</td>
+            <td class="spieler">K. Lahnstein (29)</td>
+        </tr>
+        <tr>
+            <td class="platz">13</td>
+            <td class="team">Parfect 4*</td>
+            <td class="summe">25</td>
+            <td class="spieler">M. Stauber (25)</td>
+        </tr>
+        <tr>
+            <td class="platz">14</td>
+            <td class="team">Die Driverhelden*</td>
+            <td class="summe">23</td>
+            <td class="spieler">T. Trenz (23)</td>
+        </tr>
+        <tr>
+            <td class="platz">15</td>
+            <td class="team">Mir doch egal*</td>
+            <td class="summe">21</td>
+            <td class="spieler">M. Beißwenger (21)</td>
+        </tr>
+        <tr>
+            <td class="platz">16</td>
+            <td class="team">Putterflys*</td>
+            <td class="summe">19</td>
+            <td class="spieler">M. Kern (19)</td>
+        </tr>
+        <tr>
+            <td class="platz">17</td>
+            <td class="team">Tee Time Legends*</td>
+            <td class="summe">19</td>
+            <td class="spieler">G. Schenkelberg (19)</td>
+        </tr>
+        <tr>
+            <td class="platz">18</td>
+            <td class="team">Fore Fragezeichen*</td>
+            <td class="summe">19</td>
+            <td class="spieler">A. Stetenfeld (19)</td>
+        </tr>
+        <tr>
+            <td class="platz">19</td>
+            <td class="team">Die Kaffeezocker*</td>
+            <td class="summe">19</td>
+            <td class="spieler">W. Hardy (19)</td>
+        </tr>
+        <tr>
+            <td class="platz">20</td>
+            <td class="team">Schöner Schwung. Schade drum*</td>
+            <td class="summe">18</td>
+            <td class="spieler">T. Specht (18)</td>
+        </tr>
+        <tr>
+            <td class="platz">21</td>
+            <td class="team">Team ohne Namen*</td>
+            <td class="summe">17</td>
+            <td class="spieler">A. Hennes (17)</td>
+        </tr>
+        <tr>
+            <td class="platz">22</td>
+            <td class="team">Yes we can*</td>
+            <td class="summe">7</td>
+            <td class="spieler">K. Selker (7)</td>
+        </tr>
+        <tr>
+            <td class="platz">23</td>
+            <td class="team">Golf and Glory*</td>
+            <td class="summe">7</td>
+            <td class="spieler">L. Elschnig (7)</td>
+        </tr>
+        <tr>
+            <td class="platz">24</td>
+            <td class="team">Die glorreichen Vier*</td>
+            <td class="summe">3</td>
+            <td class="spieler">K. Herbert (3)</td>
+        </tr>
+        <tr>
+            <td class="platz">25</td>
+            <td class="team">Die Ballartisten*</td>
+            <td class="summe">0</td>
+            <td class="spieler">P. Albath (0)</td>
+        </tr>
+            </tbody>
+        </table>
+        <div class="fuss">* weniger als 3 Spieler gewertet &middot; Stand 05.09.2026 11:52</div>
+    </div>
+</body>
+</html>
