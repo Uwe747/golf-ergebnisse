@@ -13,9 +13,16 @@
         margin: 0;
         padding: 0;
     }
+    .rahmen {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        justify-content: center;
+    }
     .karte {
+        flex: 1 1 0;
         max-width: 720px;
-        margin: 0 auto;
+        min-width: 0;
         background: #ffffff;
         border-radius: 4px;
         box-shadow: 0 1px 4px rgba(0,0,0,0.25);
@@ -93,29 +100,30 @@
 </script>
 </head>
 <body>
-    <div class="karte">
-        <div class="titel">Team-Cup Ergebnis</div>
-        <table>
-            <thead>
-                <tr>
-                    <th class="platz">Platz</th>
-                    <th class="team">Team</th>
-                    <th class="summe">Summe</th>
-                    <th>Spieler (Punkte)</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="rahmen">
+        <div class="karte">
+            <div class="titel">Team-Cup Ergebnis</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="platz">Platz</th>
+                        <th class="team">Team</th>
+                        <th class="summe">Summe</th>
+                        <th>Spieler (Punkte)</th>
+                    </tr>
+                </thead>
+                <tbody>
         <tr>
             <td class="platz">1</td>
-            <td class="team">Lollipops*</td>
-            <td class="summe">100</td>
-            <td class="spieler">M. Terborg (54), B. Fisch (46)</td>
+            <td class="team">0 Master, 4 Desaster</td>
+            <td class="summe">146</td>
+            <td class="spieler">C. Beißwenger (80), R. Günther (40), L. Görg (26)</td>
         </tr>
         <tr>
             <td class="platz">2</td>
-            <td class="team">0 Master, 4 Desaster*</td>
-            <td class="summe">66</td>
-            <td class="spieler">R. Günther (40), L. Görg (26)</td>
+            <td class="team">Lollipops*</td>
+            <td class="summe">100</td>
+            <td class="spieler">M. Terborg (54), B. Fisch (46)</td>
         </tr>
         <tr>
             <td class="platz">3</td>
@@ -195,6 +203,22 @@
             <td class="summe">21</td>
             <td class="spieler">M. Beißwenger (21)</td>
         </tr>
+                </tbody>
+            </table>
+            <div class="fuss">* weniger als 3 Spieler gewertet &middot; Stand 05.09.2026 12:12</div>
+        </div>
+        <div class="karte">
+            <div class="titel">Team-Cup Ergebnis (Forts.)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="platz">Platz</th>
+                        <th class="team">Team</th>
+                        <th class="summe">Summe</th>
+                        <th>Spieler (Punkte)</th>
+                    </tr>
+                </thead>
+                <tbody>
         <tr>
             <td class="platz">16</td>
             <td class="team">Putterflys*</td>
@@ -255,9 +279,10 @@
             <td class="summe">0</td>
             <td class="spieler">P. Albath (0)</td>
         </tr>
-            </tbody>
-        </table>
-        <div class="fuss">* weniger als 3 Spieler gewertet &middot; Stand 05.09.2026 12:03</div>
+                </tbody>
+            </table>
+            <div class="fuss">Stand 05.09.2026 12:12</div>
+        </div>
     </div>
 </body>
 </html>
